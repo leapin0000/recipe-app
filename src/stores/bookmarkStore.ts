@@ -26,7 +26,7 @@ const useBookmarkStore = create<BookmarkStore & Actions>()(
           state.bookmarks.push(recipeId); // immerを使用して直接配列に追加
         });
         const updatedBookmarks = useBookmarkStore.getState().bookmarks;
-        const userDocRef = doc(db, `user/V6It2FrodO6srZZDmhWp`);
+        const userDocRef = doc(db, `user/PdF8SXLGIdZ5QtlxETwr`);
         await updateDoc(userDocRef, { bookmarks: updatedBookmarks });
       },
       removeBookmark: async (recipeId) => {
@@ -37,7 +37,7 @@ const useBookmarkStore = create<BookmarkStore & Actions>()(
           }
         });
         const updatedBookmarks = useBookmarkStore.getState().bookmarks;
-        const userDocRef = doc(db, `user/V6It2FrodO6srZZDmhWp`);
+        const userDocRef = doc(db, `user/PdF8SXLGIdZ5QtlxETwr`);
         await updateDoc(userDocRef, { bookmarks: updatedBookmarks });
       },
       setBookmarks: (bookmarks) => {
@@ -50,7 +50,7 @@ const useBookmarkStore = create<BookmarkStore & Actions>()(
 );
 
 const initializeBookmarks = async () => {
-  const userDocRef = doc(db, `user/V6It2FrodO6srZZDmhWp`);
+  const userDocRef = doc(db, `user/PdF8SXLGIdZ5QtlxETwr`);
   const docSnap = await getDoc(userDocRef);
   if (docSnap.exists()) {
     useBookmarkStore.getState().setBookmarks(docSnap.data().bookmarks || []);

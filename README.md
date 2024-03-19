@@ -22,12 +22,27 @@ DeepL API Free プランに登録して、DeeL API を利用する手順を説�
 
 ・[DeepL API のドキュメント](https://www.deepl.com/ja/docs-api/translate-text/translate-text)
 
+## Firebase の設定
+
+レシピ情報をブックマークする機能を追加するために、firestore を導入する。
+
+[サンプルアプリの Firebase](https://console.firebase.google.com/u/0/project/recipe-app-83770/overview?hl=ja)
+
 ## .env ファイルへの記述
 
 ルートディレクトリに `.env` ファイルを生成して、取得した ID とキーを`.env`に追加してください。
 
 ```
-VITE_EDAMAM_API_ID=Edamam の Application ID
-VITE_EDAMAM_API_KEY=Edamam の Application Keys
-VITE_DEEPL_API_KEY=74be2aca-2f5f-4a84-ad65-bea779497a3e:fx
+# 外部APIのキー
+VITE_EDAMAM_API_ID=
+VITE_EDAMAM_API_KEY=
+VITE_DEEPL_API_KEY=
+
+# Firebaseの設定
+VITE_FIREBASE_API_KEY=
+VITE_FIREBASE_AUTH_DOMAIN=
+VITE_FIREBASE_PROJECT_ID=
+VITE_FIREBASE_STORAGE_BUCKET=
+VITE_FIREBASE_MESSAGING_SENDER_ID=
+VITE_FIREBASE_APP_ID=
 ```
